@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo de Asistencia | Centro Activo 20-30</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #24346B;
+      --secondary-color: #FDDD00;
+      --btn-color: #E2261D;
+      --btn-hover: #c21a18;
+      --bg-color: #f5f5f5;
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Roboto', sans-serif; background: var(--bg-color); color: var(--primary-color); line-height:1.6; }
+
+    /* ----- HEADER ----- */
+    header.top-bar {
+      width:100%; background-color: var(--primary-color); color:white;
+      display:flex; justify-content:space-between; align-items:center; padding:10px 50px; flex-wrap:wrap;
+    }
+    .logo { display:flex; align-items:center; gap:20px; }
+    .logo-text { display:flex; flex-direction:column; align-items:flex-start; gap:4px; }
+    .logo-text strong { font-size:22px; font-weight:900; color:white; line-height:1.1; }
+    .logo-text span { background:var(--secondary-color); color:var(--primary-color); font-size:13px; font-weight:700; padding:3px 8px; border-radius:4px; display:inline-block; }
+    .logo img { height:60px; width:auto; }
+    .divider { width:2px; height:60px; background-color:white; border-radius:1px; }
+    .dropdown { position:relative; display:inline-block; }
+    .dropdown button {
+      background:none; color:white; font-size:18px; font-weight:600; border:none; cursor:pointer; padding:10px;
+      display:flex; align-items:center; gap:8px; transition:color 0.3s ease;
+    }
+    .dropdown button:hover { color:var(--secondary-color); }
+    .dropdown-content {
+      opacity:0; transform:translateY(-10px); pointer-events:none;
+      position:absolute; background-color:white; min-width:280px; max-height:300px; overflow-y:auto;
+      box-shadow:0 6px 15px rgba(0,0,0,0.15); z-index:10; top:45px; right:0; border-radius:8px; padding:15px; line-height:1.5;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .dropdown-content.show { opacity:1; transform:translateY(0); pointer-events:auto; }
+    .dropdown-content a, .dropdown-content div { color:var(--primary-color); padding:8px 0; text-decoration:none; display:block; font-size:15px; }
+    .dropdown-content p a { color:var(--primary-color); text-decoration:none; }
+    .dropdown-content p a:hover { color:#E2261D; }
+
+    /* ----- MAIN CONTENT ----- */
+    main {
+      padding:40px 20px; display:flex; flex-direction:column; align-items:center; gap:40px;
+      max-width:1200px; margin:0 auto;
+    }
+    section.form-container, section.report-container {
+      background:white; padding:30px; border-radius:12px; box-shadow:0 8px 25px rgba(0,0,0,0.1);
+      width:100%; max-width:600px;
+    }
+    section h2 { text-align:center; margin-bottom:20px; font-size:26px; color:var(--primary-color); }
+
+    .form-group { margin-bottom:20px; }
+    .form-group label { display:block; margin-bottom:8px; font-weight:500; }
+    .form-group input, .form-group select {
+      width:100%; padding:10px; border:1px solid #ccc; border-radius:6px; font-size:15px;
+    }
+    .form-group input:focus, .form-group select:focus {
+      border-color:var(--primary-color); outline:none; box-shadow:0 0 8px rgba(36,52,107,0.2);
+    }
+
+    .submit-btn {
+      width:100%; padding:14px; font-size:18px; font-weight:700; color:white;
+      background:var(--btn-color); border:none; border-radius:8px; cursor:pointer; transition:all 0.3s ease;
+    }
+    .submit-btn:hover { background:var(--btn-hover); transform:translateY(-2px); }
+
+    table { width:100%; border-collapse:collapse; margin-top:20px; }
+    th, td { border:1px solid #ddd; text-align:left; padding:10px; }
+    th { background-color:var(--primary-color); color:white; }
+    th { scope: col; }
+
+    /* ----- FOOTER ----- */
+    footer.bottom-bar {
+      width:100%; background-color:var(--primary-color); color:white; text-align:center;
+      padding:12px 50px; font-size:14px; margin-top:40px;
+    }
+
+    @media (max-width:480px) {
+      main { padding:20px; }
+      section.form-container, section.report-container { padding:25px 20px; }
+      header.top-bar { padding:10px 20px; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="top-bar">
+    <div class="logo">
+      <div class="logo-text">
+        <strong>Activo<br>2030</strong>
+        <span>Tres Ríos</span>
+      </div>
+      <div class="divider"></div>
+      <img src="https://activo20-30internacional.org/wp-content/uploads/2023/06/logo_activo_2030_internacional.png" alt="Logo Activo 20-30">
+    </div>
+
+    <div class="dropdown">
+      <button id="menu-btn" aria-haspopup="true" aria-expanded="false">Información General ▾</button>
+      <div class="dropdown-content">
+        <a href="index.html" style="font-weight:bold;">Ir a la Página Principal</a>
+        <div style="margin-top:10px;">
+          <strong>Contactos:</strong>
+          <p><strong>Correo:</strong> <a href="mailto:info@activo2030tresrios.org">info@activo2030tresrios.org</a></p>
+          <p><strong>Teléfono:</strong> <a href="tel:+50640203040">+506 4020 3040</a></p>
+        </div>
+        <div style="margin-top:10px;">
+          <strong>Información del Club:</strong>
+          <p>Somos una organización sin fines de lucro dedicada a formar líderes jóvenes y servir a la comunidad mediante proyectos sociales, educativos y solidarios en Tres Ríos y alrededores.</p>
+        </div>
+        <div style="margin-top:10px;">
+          <strong>Redes Sociales:</strong>
+          <p><a href="https://www.facebook.com/activo2030tresrios" target="_blank">Facebook</a></p>
+          <p><a href="https://www.instagram.com/activo2030tresrios" target="_blank">Instagram</a></p>
+          <p><a href="https://activo2030tresrios.org" target="_blank">Sitio Web Oficial</a></p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- Formulario de asistencia -->
+    <section class="form-container">
+      <h2>Formulario de Asistencia</h2>
+      <form id="asistenciaForm">
+        <div class="form-group">
+          <label for="nombre">Nombre del Participante:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" required>
+        </div>
+        <div class="form-group">
+          <label for="fecha">Fecha:</label>
+          <input type="date" id="fecha" name="fecha" required>
+        </div>
+        <div class="form-group">
+          <label for="actividad">Actividad:</label>
+          <select id="actividad" name="actividad" required>
+            <option value="">Seleccione una actividad</option>
+            <option value="Reunión Semanal">Reunión Semanal</option>
+            <option value="Proyecto Social">Proyecto Social</option>
+            <option value="Capacitación">Capacitación</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="asistencia">Asistencia:</label>
+          <select id="asistencia" name="asistencia" required>
+            <option value="">Seleccione...</option>
+            <option value="Presente">Presente</option>
+            <option value="Ausente">Ausente</option>
+          </select>
+        </div>
+        <button type="submit" class="submit-btn">Registrar Asistencia</button>
+      </form>
+    </section>
+
+    <!-- Vista de reportes -->
+    <section class="report-container">
+      <h2>Reporte de Asistencias</h2>
+      <table id="tablaAsistencia">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Actividad</th>
+            <th scope="col">Asistencia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Datos generados -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bottom-bar">
+    &copy; 2025 Centro Activo 20-30 - Tres Ríos. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    // ---------- Dropdown ----------
+    const menuBtn = document.getElementById('menu-btn');
+    const dropdown = document.querySelector('.dropdown-content');
+
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isShown = dropdown.classList.toggle('show');
+      menuBtn.setAttribute('aria-expanded', isShown);
+    });
+    window.addEventListener('click', (e) => {
+      if (!e.target.matches('#menu-btn')) dropdown.classList.remove('show');
+      menuBtn.setAttribute('aria-expanded', false);
+    });
+
+    // ---------- Registro de asistencia ----------
+    const form = document.getElementById('asistenciaForm');
+    const tabla = document.getElementById('tablaAsistencia').querySelector('tbody');
+
+    function escapeHTML(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const nombre = form.elements['nombre'].value.trim();
+      const fecha = form.elements['fecha'].value;
+      const actividad = form.elements['actividad'].value;
+      const asistencia = form.elements['asistencia'].value;
+
+      if (!nombre || !fecha || !actividad || !asistencia) {
+        alert("Por favor complete todos los campos.");
+        return;
+      }
+
+      // Formatear fecha
+      const fechaFormateada = new Date(fecha).toLocaleDateString('es-CR', { day:'2-digit', month:'long', year:'numeric' });
+
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${escapeHTML(nombre)}</td>
+        <td>${escapeHTML(fechaFormateada)}</td>
+        <td>${escapeHTML(actividad)}</td>
+        <td>${escapeHTML(asistencia)}</td>
+      `;
+      tabla.appendChild(row);
+
+      alert(`${nombre} registrado correctamente.`);
+      form.reset();
+    });
+  </script>
+</body>
+</html>

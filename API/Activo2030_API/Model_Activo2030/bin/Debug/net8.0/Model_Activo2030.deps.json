@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Model_Activo2030/1.0.0": {
+        "runtime": {
+          "Model_Activo2030.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Model_Activo2030/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

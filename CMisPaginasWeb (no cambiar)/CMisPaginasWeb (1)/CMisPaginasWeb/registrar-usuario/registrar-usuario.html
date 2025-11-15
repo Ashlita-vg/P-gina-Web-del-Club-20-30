@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro Activo 20-30</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #24346B;
+      --secondary-color: #FDDD00;
+      --text-color: #24346B;
+      --error-color: #E2261D;
+      --success-color: #1AAB2A;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+      color: var(--text-color);
+    }
+
+    header, footer {
+      width: 100%;
+    }
+
+    .top-bar, .bottom-bar {
+      background-color: var(--primary-color);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 50px;
+      flex-wrap: wrap;
+    }
+
+    .bottom-bar {
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+
+    .logo-text strong {
+      font-size: 22px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.1;
+    }
+
+    .logo-text span {
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .logo img {
+      height: 60px;
+      width: auto;
+    }
+
+    .divider {
+      width: 2px;
+      height: 60px;
+      background-color: #fff;
+      border-radius: 1px;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown button {
+      background: none;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s ease;
+    }
+
+    .dropdown button:hover {
+      color: var(--secondary-color);
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 280px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      z-index: 10;
+      top: 45px;
+      right: 0;
+      border-radius: 8px;
+      padding: 15px;
+      line-height: 1.5;
+      color: var(--text-color);
+      max-height: 400px;
+      overflow-y: auto;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+    }
+
+    .dropdown-content.show {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    main {
+      padding: 40px 20px;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .form-container label {
+      display: block;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+
+    .form-container input,
+    .form-container select {
+      width: 100%;
+      padding: 10px;
+      margin: 6px 0 4px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .form-container input:focus,
+    .form-container select:focus {
+      outline: 2px solid var(--secondary-color);
+      outline-offset: 2px;
+    }
+
+    .form-container button {
+      width: 100%;
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .form-container button:hover {
+      background-color: #1d2d5c;
+    }
+
+    .telefono-codigo {
+      display: flex;
+      gap: 10px;
+    }
+
+    .telefono-codigo input {
+      flex: 1;
+    }
+
+    .telefono-codigo select {
+      width: 150px;
+      flex-shrink: 0;
+    }
+
+    .toggle-ico {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 22px;
+      height: 22px;
+      cursor: pointer;
+      fill: var(--primary-color);
+      opacity: 0.7;
+      transition: opacity 0.2s ease;
+    }
+
+    .toggle-ico:hover {
+      opacity: 1;
+    }
+
+    .error-message {
+      color: var(--error-color);
+      font-size: 13px;
+      display: none;
+      margin-top: 2px;
+    }
+
+    .password-info {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-top: 10px;
+      font-size: 13px;
+      color: #444;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .password-info h4 {
+      margin-bottom: 5px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .password-info span {
+      font-weight: 700;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      padding: 25px 30px;
+      border-radius: 10px;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .close-modal {
+      background-color: var(--primary-color);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    @media (max-width: 600px) {
+      .top-bar, .bottom-bar {
+        padding: 10px 20px;
+      }
+
+      .logo-text strong {
+        font-size: 18px;
+      }
+
+      .logo img {
+        height: 50px;
+      }
+
+      .dropdown-content {
+        left: 0;
+        right: 0;
+        min-width: auto;
+      }
+
+      .telefono-codigo {
+        flex-direction: column;
+      }
+
+      .telefono-codigo select {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="logo">
+      <div class="logo-text">
+        <strong>Activo<br>2030</strong>
+        <span>Tres Ríos</span>
+      </div>
+      <div class="divider"></div>
+      <img src="https://activo20-30internacional.org/wp-content/uploads/2023/06/logo_activo_2030_internacional.png" alt="Logo Activo 20-30">
+    </div>
+
+    <div class="dropdown">
+      <button id="menu-btn" aria-haspopup="true" aria-expanded="false">Información General ▾</button>
+      <div class="dropdown-content">
+        <a href="index.html" style="font-weight: bold;">Ir a la Página Principal</a>
+        <div style="margin-top:10px;">
+          <strong>Contactos:</strong>
+          <p><strong>Correo:</strong> <a href="mailto:info@activo2030tresrios.org">info@activo2030tresrios.org</a></p>
+          <p><strong>Teléfono:</strong> <a href="tel:+50640203040">+506 4020 3040</a></p>
+        </div>
+        <div style="margin-top:10px;">
+          <strong>Información del Club:</strong>
+          <p>Somos una organización sin fines de lucro dedicada a formar líderes jóvenes y servir a la comunidad mediante proyectos sociales, educativos y solidarios en Tres Ríos y alrededores.</p>
+        </div>
+        <div style="margin-top:10px;">
+          <strong>Redes Sociales:</strong>
+<p><a href="https://www.facebook.com/activo2030tresrios" target="_blank">Facebook</a></p>
+<p><a href="https://www.instagram.com/clubactivo2030tresrios/" target="_blank">Instagram</a></p>
+<p><a href="https://share.google/vhvwmNiEZAPfMx9S6" target="_blank">Sitio Web Oficial</a></p>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="form-container">
+      <h2>Registro</h2>
+      <form id="registroForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" placeholder="Ingrese sus apellidos" required>
+
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+
+       <label for="telefono">Número de Teléfono y Código:</label>
+<div class="telefono-codigo">
+  <select id="codigo" name="codigo" required>
+    <!-- América Latina -->
+    <option value="+54">Argentina (+54)</option>
+    <option value="+501">Belice (+501)</option>
+    <option value="+591">Bolivia (+591)</option>
+    <option value="+55">Brasil (+55)</option>
+    <option value="+56">Chile (+56)</option>
+    <option value="+57">Colombia (+57)</option>
+    <option value="+506" selected>Costa Rica (+506)</option>
+    <option value="+53">Cuba (+53)</option>
+    <option value="+593">Ecuador (+593)</option>
+    <option value="+503">El Salvador (+503)</option>
+    <option value="+502">Guatemala (+502)</option>
+    <option value="+509">Haití (+509)</option>
+    <option value="+504">Honduras (+504)</option>
+    <option value="+52">México (+52)</option>
+    <option value="+505">Nicaragua (+505)</option>
+    <option value="+507">Panamá (+507)</option>
+    <option value="+595">Paraguay (+595)</option>
+    <option value="+51">Perú (+51)</option>
+    <option value="+1-787">Puerto Rico (+1 787)</option>
+    <option value="+1-939">Puerto Rico (+1 939)</option>
+    <option value="+809">República Dominicana (+809)</option>
+    <option value="+829">República Dominicana (+829)</option>
+    <option value="+849">República Dominicana (+849)</option>
+    <option value="+597">Surinam (+597)</option>
+    <option value="+58">Venezuela (+58)</option>
+    <option value="+598">Uruguay (+598)</option>
+
+    <!-- Otros países latinoamericanos del Caribe -->
+    <option value="+592">Guyana (+592)</option>
+    <option value="+590">Guadalupe (+590)</option>
+    <option value="+596">Martinica (+596)</option>
+  </select>
+
+  <input type="tel" id="telefono" name="telefono" placeholder="6000 0000"
+    pattern="[0-9]{8,14}" required>
+</div>
+
+
+        <label for="contrasena">Crear Contraseña:</label>
+        <div style="position:relative;">
+          <input type="password" id="contrasena" name="contrasena" placeholder="********" required minlength="8" maxlength="20">
+          <svg id="toggleContrasena" class="toggle-ico" viewBox="0 0 24 24">
+            <path d="M12 5C7 5 2.73 8.11 1 12c1.73 3.89 6 7 11 7s9.27-3.11 11-7c-1.73-3.89-6-7-11-7zm0 12a5 
+            5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
+          </svg>
+        </div>
+
+        <div class="password-info" id="passwordInfo">
+          <h4>Seguridad de la contraseña: <span id="nivelSeguridad" style="color:#E2261D;">Débil</span></h4>
+          <p id="requisitos">
+            ❌ Debe tener letras mayúsculas y minúsculas.<br>
+            ❌ Debe tener números y signos especiales.<br>
+            ❌ Consta de 8 dígitos como mínimo.
+          </p>
+          <a href="#" id="porqueLink">¿Por qué?</a>
+        </div>
+
+        <label for="confirmar">Confirmar Contraseña:</label>
+        <div style="position:relative;">
+          <input type="password" id="confirmar" name="confirmar" placeholder="********" required>
+          <svg id="toggleConfirmar" class="toggle-ico" viewBox="0 0 24 24">
+            <path d="M12 5C7 5 2.73 8.11 1 12c1.73 3.89 6 7 11 7s9.27-3.11 11-7c-1.73-3.89-6-7-11-7zm0 12a5 
+            5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
+          </svg>
+        </div>
+        <p class="error-message" id="errorConfirmar">Las contraseñas no coinciden.</p>
+
+        <button type="submit">Registrar</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="bottom-bar">
+    <div>© Club Activo 20-30 de Tres Ríos, Cartago, 2025.</div>
+  </footer>
+
+  <div id="porqueModal" class="modal">
+    <div class="modal-content">
+      <h3>¿Por qué es importante una contraseña segura?</h3>
+      <p>
+        Una contraseña fuerte protege tu información personal, tus cuentas y tus datos de accesos no autorizados.
+        Al incluir letras mayúsculas, minúsculas, números y signos, se dificulta que alguien pueda adivinarla o romperla con programas automáticos.
+        Además, una longitud mínima de 8 caracteres aumenta significativamente la seguridad.
+      </p>
+      <button class="close-modal" id="cerrarModal">Entendido</button>
+    </div>
+  </div>
+
+  <script>
+    // Dropdown funcional
+    const btn = document.getElementById('menu-btn');
+    const content = btn.nextElementSibling;
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      const isShown = content.classList.toggle('show');
+      btn.setAttribute('aria-expanded', isShown);
+    });
+    window.addEventListener('click', e => {
+      if (!btn.contains(e.target) && !content.contains(e.target)) {
+        content.classList.remove('show');
+        btn.setAttribute('aria-expanded', false);
+      }
+    });
+// 🟢 Toggle de contraseña (mostrar / ocultar)
+function setupTogglePassword(inputId, toggleId) {
+  const input = document.getElementById(inputId);
+  const toggle = document.getElementById(toggleId);
+
+  if (!input || !toggle) return; // Evita errores si no existen
+
+  const eye = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M12 5C7 5 2.73 8.11 1 12c1.73 3.89 6 7 11 7s9.27-3.11 11-7c-1.73-3.89-6-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
+    </svg>`;
+  const eyeOff = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M2.39 1.73L1.11 3l4.5 4.5C3.06 9.53 1.73 11.72 1 12c1.73 3.89 6 7 11 7a11 11 0 0 0 6.21-1.91L20.84 21l1.27-1.27M9.9 6.73l2.13 2.13a3 3 0 0 1 3.11 3.11l2.13 2.13a5 5 0 0 0-7.37-7.37z"/>
+    </svg>`;
+
+  // Estado inicial
+  toggle.innerHTML = eye;
+
+  toggle.addEventListener('click', () => {
+    const isPassword = input.type === 'password';
+    input.type = isPassword ? 'text' : 'password';
+    toggle.innerHTML = isPassword ? eyeOff : eye;
+  });
+}
+
+// Inicializar toggles
+setupTogglePassword('contrasena', 'toggleContrasena');
+setupTogglePassword('confirmar', 'toggleConfirmar');
+
+// 🟡 Validación de contraseña
+const contrasena = document.getElementById('contrasena');
+const confirmar = document.getElementById('confirmar');
+const nivelSeguridad = document.getElementById('nivelSeguridad');
+const requisitos = document.getElementById('requisitos');
+const errorConfirmar = document.getElementById('errorConfirmar');
+
+if (contrasena && confirmar) {
+  contrasena.addEventListener('input', () => {
+    const val = contrasena.value;
+    const mayus = /[A-Z]/.test(val);
+    const minus = /[a-z]/.test(val);
+    const numero = /\d/.test(val);
+    const signo = /[!@#$%^&*(),.?":{}|<>_\-]/.test(val);
+    const longitud = val.length >= 8;
+
+    let fuerza = 0;
+    if (mayus && minus) fuerza++;
+    if (numero) fuerza++;
+    if (signo) fuerza++;
+    if (longitud) fuerza++;
+
+    requisitos.innerHTML = `
+      ${mayus && minus ? '✅' : '❌'} Debe tener letras mayúsculas y minúsculas.<br>
+      ${(numero && signo) ? '✅' : '❌'} Debe tener números y signos especiales.<br>
+      ${longitud ? '✅' : '❌'} Consta de 8 dígitos como mínimo.
+    `;
+
+    if (fuerza <= 1) {
+      nivelSeguridad.textContent = 'Débil';
+      nivelSeguridad.style.color = '#E2261D';
+    } else if (fuerza === 2 || fuerza === 3) {
+      nivelSeguridad.textContent = 'Media';
+      nivelSeguridad.style.color = '#FDDD00';
+    } else {
+      nivelSeguridad.textContent = 'Fuerte';
+      nivelSeguridad.style.color = '#1AAB2A';
+    }
+  });
+
+  confirmar.addEventListener('input', () => {
+    if (confirmar.value === contrasena.value) {
+      errorConfirmar.style.display = 'none';
+      confirmar.style.borderColor = '#1AAB2A';
+    } else {
+      errorConfirmar.style.display = 'block';
+      confirmar.style.borderColor = '#E2261D';
+    }
+  });
+}
+
+
+    // Modal "¿Por qué?"
+    const modal = document.getElementById('porqueModal');
+    document.getElementById('porqueLink').addEventListener('click', e => {
+      e.preventDefault();
+      modal.style.display = 'flex';
+    });
+    document.getElementById('cerrarModal').addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+    window.addEventListener('click', e => {
+      if (e.target === modal) modal.style.display = 'none';
+    });
+
+    // Permitir solo números en teléfono
+    const telefono = document.getElementById('telefono');
+    telefono.addEventListener('input', () => {
+      telefono.value = telefono.value.replace(/\D/g, '');
+    });
+  </script>
+  <script src="registrar-usuario.js"></script>
+</body>
+</html>

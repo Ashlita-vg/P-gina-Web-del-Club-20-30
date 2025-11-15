@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "Controller_Activo2030.UserController",
+    "Method": "SelectUser",
+    "RelativePath": "api/User/SelectUser",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

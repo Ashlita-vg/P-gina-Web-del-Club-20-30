@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centro de Desarrollo Activo 20-30 | Tres Ríos</title>
+  <meta name="description" content="Centro de Desarrollo Activo 20-30 en Tres Ríos. Regístrate, conoce nuestros programas y agenda citas fácilmente.">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; }
+    body { background: #ffffff; line-height: 1.6; }
+    a { text-decoration:none; transition: all 0.2s ease; }
+    a:hover { opacity:0.8; }
+    header { background:#24346B; color:white; display:flex; justify-content:space-between; align-items:center; padding:15px 50px; flex-wrap:wrap; box-shadow:0 2px 10px rgba(0,0,0,0.1); position:relative; }
+    .logo { display:flex; align-items:center; gap:20px; }
+    .logo-text { display:flex; flex-direction:column; justify-content:center; line-height:1.2; }
+    .logo-text strong { font-size:22px; font-weight:900; color:white; }
+    .logo-text span { background:#FDDD00; color:#24346B; font-size:13px; font-weight:700; padding:3px 8px; border-radius:4px; margin-top:5px; width:fit-content; }
+    .divider { width:2px; height:50px; background:rgba(255,255,255,0.3); }
+    .logo img { width:60px; height:60px; object-fit:contain; }
+    .dropdown { position:relative; }
+    .dropdown button { background:transparent; color:white; border:none; font-size:16px; font-weight:600; cursor:pointer; display:flex; align-items:center; gap:5px; }
+    .dropdown button:hover, .dropdown button:focus { color:#FDDD00; outline:none; }
+    .dropdown-content { display:none; position:absolute; right:0; background:white; color:#24346B; min-width:250px; max-height:300px; overflow-y:auto; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.2); padding:15px; z-index:100; }
+    .dropdown-content a { color:#24346B; font-weight:500; display:block; margin-bottom:10px; }
+    .dropdown-content a:focus { background: rgba(242,221,0,0.2); outline:none; }
+    @media(hover:hover){ .dropdown:hover .dropdown-content { display:block; } }
+    .dropdown-content.show { display:block; }
+    main { display:flex; justify-content:space-between; align-items:center; padding:80px 50px; min-height:calc(100vh - 90px); flex-wrap:wrap; position:relative; }
+    .text-section { max-width:600px; }
+    .text-section h1 { font-size:48px; color:#24346B; margin-bottom:25px; line-height:1.2; }
+    .text-section p { font-size:18px; color:rgba(36,52,107,0.8); margin-bottom:35px; line-height:1.8; }
+    .buttons { display:flex; gap:20px; flex-wrap:wrap; }
+    .buttons a { font-size:18px; border:none; border-radius:8px; padding:14px 32px; cursor:pointer; text-align:center; font-weight:700; box-shadow:0 4px 6px rgba(0,0,0,0.1); transition:all 0.2s ease; }
+    .buttons a:active { transform:scale(0.98); opacity:0.9; }
+    .btn-registrar { background:#E2261D; color:white; }
+    .btn-iniciar { background:#FDDD00; color:#24346B; }
+    .icon-container { position:absolute; top:50%; right:50px; transform:translateY(-50%); }
+    .icon { width:400px; max-height:350px; height:auto; }
+    .message { margin-top:20px; font-weight:600; color:#0077cc; }
+
+    @media(max-width:950px){ main{flex-direction:column;text-align:center;padding:50px 20px;} .text-section h1{font-size:36px;} .text-section p{font-size:16px;} .icon-container{position:static;margin-top:30px;transform:none;} .icon{width:280px;} .buttons{flex-direction:column;width:100%;} .buttons a{width:100%; max-width:300px;} .divider{display:none;} }
+    @media(max-width:650px){ .text-section h1{font-size:32px;} .text-section p{font-size:15px;} }
+    @media(max-width:480px){ header{padding:15px 20px; flex-direction:column; align-items:center; gap:10px;} .logo-text strong{font-size:18px;} .logo img{width:50px; height:50px;} .text-section h1{font-size:28px;} .text-section p{font-size:15px;} .buttons a{font-size:16px; padding:12px 24px;} .icon{width:220px;} .dropdown-content{right:auto; left:50%; transform:translateX(-50%); width:90%; max-height:400px;} }
+  </style>
+ </style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="logo">
+      <div class="logo-text">
+        <strong>Activo<br>2030</strong>
+        <span>Tres Ríos</span>
+      </div>
+      <div class="divider"></div>
+      <img src="https://activo20-30internacional.org/wp-content/uploads/2023/06/logo_activo_2030_internacional.png" alt="Logo Activo 20-30">
+    </div>
+
+    <div class="dropdown">
+      <button id="menu-btn" aria-haspopup="true" aria-expanded="false">Información General ▾</button>
+      <div class="dropdown-content">
+        <a href="index.html" style="font-weight: bold;">Ir a la Página Principal</a>
+        <div style="margin-top:10px;">
+          <strong>Contactos:</strong>
+          <p><strong>Correo:</strong> <a href="mailto:info@activo2030tresrios.org">info@activo2030tresrios.org</a></p>
+          <p><strong>Teléfono:</strong> <a href="tel:+50640203040">+506 4020 3040</a></p>
+        </div>
+        <div style="margin-top:10px;">
+          <strong>Información del Club:</strong>
+          <p>Somos una organización sin fines de lucro dedicada a formar líderes jóvenes y servir a la comunidad mediante proyectos sociales, educativos y solidarios en Tres Ríos y alrededores.</p>
+        </div>
+        <div style="margin-top:10px;">
+          <strong>Redes Sociales:</strong>
+<p><a href="https://www.facebook.com/activo2030tresrios" target="_blank">Facebook</a></p>
+<p><a href="https://www.instagram.com/clubactivo2030tresrios/" target="_blank">Instagram</a></p>
+<p><a href="https://share.google/vhvwmNiEZAPfMx9S6" target="_blank">Sitio Web Oficial</a></p>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="text-section">
+      <h1>Bienvenidos al Centro de Desarrollo Activo 20-30</h1>
+      <p>Conoce nuestros servicios y agenda tus citas de forma rápida y sencilla. Forma parte de nuestra comunidad de líderes jóvenes en Tres Ríos. Somos una organización sin fines de lucro dedicada a formar líderes jóvenes y servir a la comunidad mediante proyectos sociales, educativos y solidarios en Tres Ríos y alrededores.</p>
+
+      <div class="buttons">
+        <a href="registrar-usuario.html" class="btn-registrar" id="registrarBtn">Registrarse</a>
+        <a href="iniciar-sesion.html" class="btn-iniciar" id="loginBtn">Iniciar Sesión</a>
+      </div>
+      <div class="message" id="message"></div>
+    </div>
+
+    <div class="icon-container">
+      <img src="https://activo20-30internacional.org/wp-content/uploads/2023/06/logo_activo_2030_internacional.png" class="icon" />
+    </div>
+  </main>
+
+  <script>
+    // Mostrar mensaje y redirigir
+    const registrarBtn = document.getElementById('registrarBtn');
+    const loginBtn = document.getElementById('loginBtn');
+    const message = document.getElementById('message');
+
+    registrarBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      message.textContent = "Redirigiendo a la página de registro...";
+      setTimeout(() => { window.location.href = "registrar-usuario.html"; }, 500);
+    });
+
+    loginBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      message.textContent = "Redirigiendo a la página de inicio de sesión...";
+      setTimeout(() => { window.location.href = "iniciar-sesion.html"; }, 500);
+    });
+
+    // Dropdown del menú
+    const btn = document.getElementById('menu-btn');
+    const content = btn.nextElementSibling;
+    btn.addEventListener('click', () => {
+      const isShown = content.classList.toggle('show');
+      btn.setAttribute('aria-expanded', isShown);
+    });
+    window.addEventListener('click', (e) => {
+      if (!btn.contains(e.target) && !content.contains(e.target)) {
+        content.classList.remove('show');
+        btn.setAttribute('aria-expanded', false);
+      }
+    });
+  </script>
+</body>
+</html>
