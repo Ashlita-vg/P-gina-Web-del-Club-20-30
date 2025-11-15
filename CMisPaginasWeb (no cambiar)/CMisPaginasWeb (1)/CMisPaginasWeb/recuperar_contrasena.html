@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recuperar Contraseña - Centro Activo 20-30</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Roboto', sans-serif; background: #f5f5f5; color: #24346B; line-height: 1.6; }
+
+  /* MENÚ SUPERIOR EXACTO */
+  .top-bar { width:100%; background-color:#24346B; color:white; display:flex; justify-content:space-between; align-items:center; padding:10px 50px; flex-wrap:wrap; }
+  .logo { display:flex; align-items:center; gap:20px; }
+  .logo-text { display:flex; flex-direction:column; align-items:flex-start; gap:4px; }
+  .logo-text strong { font-size:22px; font-weight:900; color:white; line-height:1.1; }
+  .logo-text span { background:#FDDD00; color:#24346B; font-size:13px; font-weight:700; padding:3px 8px; border-radius:4px; display:inline-block; }
+  .logo img { height:60px; width:auto; }
+  .divider { width:2px; height:60px; background-color:white; border-radius:1px; }
+  .dropdown { position:relative; display:inline-block; }
+  .dropdown button { background:none; color:white; font-size:18px; font-weight:600; border:none; cursor:pointer; padding:10px; display:flex; align-items:center; gap:8px; transition:color 0.3s ease; }
+  .dropdown button:hover { color:#FDDD00; }
+  .dropdown-content { display:none; position:absolute; background-color:white; min-width:280px; max-height:300px; overflow-y:auto; box-shadow:0 6px 15px rgba(0,0,0,0.15); z-index:10; top:45px; right:0; border-radius:8px; padding:15px; line-height:1.5; }
+  .dropdown-content.show { display:block; }
+  .dropdown-content a, .dropdown-content div { color:#24346B; padding:8px 0; text-decoration:none; display:block; font-size:15px; }
+  .dropdown-content p a { color:#24346B; text-decoration:none; }
+  .dropdown-content p a:hover { color:#E2261D; }
+
+  /* FORMULARIO */
+  main { display:flex; justify-content:center; align-items:center; min-height:calc(100vh - 120px); padding:40px 20px; }
+  .form-container { background:white; padding:40px 30px; border-radius:12px; box-shadow:0 8px 25px rgba(0,0,0,0.1); width:100%; max-width:400px; }
+  .form-container h2 { text-align:center; margin-bottom:20px; font-size:28px; color:#24346B; }
+  .form-container p { text-align:center; margin-bottom:20px; font-size:15px; }
+  .form-group { margin-bottom:20px; }
+  .form-group label { display:block; margin-bottom:8px; font-weight:500; }
+  .form-group input { padding:10px; border:1px solid #ccc; border-radius:6px; font-size:15px; font-family:'Roboto',sans-serif; width:100%; }
+  .form-group input:focus { border-color:#24346B; outline:none; box-shadow:0 0 8px rgba(36,52,107,0.2); }
+
+  .submit-btn { width:100%; padding:14px; font-size:18px; font-weight:700; color:white; background:#E2261D; border:none; border-radius:8px; cursor:pointer; transition:all 0.3s ease; }
+  .submit-btn:hover { background:#c21a18; transform:translateY(-2px); }
+
+  .login-link { text-align:center; margin-top:15px; font-size:15px; cursor:pointer; color:#24346B; font-weight:700; transition:0.3s; }
+  .login-link a { color:#24346B; font-weight:700; text-decoration:none; }
+  .login-link a:hover { color:#E2261D; }
+
+  .message { font-size:14px; margin-top:5px; text-align:center; }
+  .message.success { color:#28A745; }
+  .message.error { color:#E2261D; }
+
+  .bottom-bar { width:100%; background-color:#24346B; color:white; text-align:center; padding:12px 50px; font-size:14px; }
+
+  @media (max-width:480px) { main{padding:30px 15px;} .form-container{padding:30px 20px;} .top-bar{padding:10px 20px;} }
+</style>
+</head>
+<body>
+
+<!-- MENÚ SUPERIOR EXACTO -->
+<div class="top-bar">
+  <div class="logo">
+    <div class="logo-text">
+      <strong>Activo<br>2030</strong>
+      <span>Tres Ríos</span>
+    </div>
+    <div class="divider"></div>
+    <img src="https://activo20-30internacional.org/wp-content/uploads/2023/06/logo_activo_2030_internacional.png" alt="Logo Activo 20-30">
+  </div>
+
+  <div class="dropdown">
+    <button id="menu-btn" aria-haspopup="true" aria-expanded="false">Información General ▾</button>
+    <div class="dropdown-content">
+      <a href="index.html" style="font-weight:bold;">Ir a la Página Principal</a>
+      <div style="margin-top:10px;">
+        <strong>Contactos:</strong>
+        <p><strong>Correo:</strong> <a href="mailto:info@activo2030tresrios.org">info@activo2030tresrios.org</a></p>
+        <p><strong>Teléfono:</strong> <a href="tel:+50640203040">+506 4020 3040</a></p>
+      </div>
+      <div style="margin-top:10px;">
+        <strong>Información del Club:</strong>
+        <p>Somos una organización sin fines de lucro dedicada a formar líderes jóvenes y servir a la comunidad mediante proyectos sociales, educativos y solidarios en Tres Ríos y alrededores.</p>
+      </div>
+      <div style="margin-top:10px;">
+        <strong>Redes Sociales:</strong>
+<p><a href="https://www.facebook.com/activo2030tresrios" target="_blank">Facebook</a></p>
+<p><a href="https://www.instagram.com/clubactivo2030tresrios/" target="_blank">Instagram</a></p>
+<p><a href="https://share.google/vhvwmNiEZAPfMx9S6" target="_blank">Sitio Web Oficial</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FORMULARIO -->
+<main>
+  <div class="form-container">
+    <h2>Recuperar Contraseña</h2>
+    <p>Ingresa tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña.</p>
+
+    <form id="recoverForm">
+      <div class="form-group">
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+        <div id="correoMessage" class="message"></div>
+      </div>
+      <button type="submit" class="submit-btn">Enviar enlace</button>
+      <div id="generalMessage" class="message"></div>
+    </form>
+
+    <div class="login-link">
+      ¿No tienes cuenta? <a href="registrar-usuario.html">Regístrate aquí</a><br>
+      <a href="iniciar-sesion.html">Volver al inicio de sesión</a>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<div class="bottom-bar">
+  &copy; 2025 Centro Activo 20-30 - Tres Ríos. Todos los derechos reservados.
+</div>
+
+<!-- SCRIPTS -->
+<script>
+  // --- MENÚ ---
+  const btn = document.getElementById('menu-btn');
+  const content = btn.nextElementSibling;
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    const isShown = content.classList.toggle('show');
+    btn.setAttribute('aria-expanded', isShown);
+  });
+  window.addEventListener('click', e => {
+    if (!btn.contains(e.target) && !content.contains(e.target)) {
+      content.classList.remove('show');
+      btn.setAttribute('aria-expanded', false);
+    }
+  });
+
+  // --- FORMULARIO RECUPERAR CONTRASEÑA ---
+  const recoverForm = document.getElementById('recoverForm');
+  const correoMsg = document.getElementById('correoMessage');
+  const generalMsg = document.getElementById('generalMessage');
+
+  recoverForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    correoMsg.textContent = '';
+    generalMsg.textContent = '';
+
+    const correo = document.getElementById('correo').value.trim();
+    if (!correo) {
+      correoMsg.textContent = 'Ingresa un correo válido.';
+      correoMsg.className = 'message error';
+      return;
+    }
+
+    // Aquí puedes conectar tu API real
+    generalMsg.textContent = 'Se envió el enlace para restablecer tu contraseña.';
+    generalMsg.className = 'message success';
+  });
+</script>
+
+</body>
+</html>

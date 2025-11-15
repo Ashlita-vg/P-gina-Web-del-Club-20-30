@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Clases Centro de Desarrollo 20-30</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Roboto', sans-serif; }
+  body { background: #f0f2f5; color: #333; }
+
+  header { text-align: center; padding: 30px 0; background: #24346b; color: #fddd00; font-size: 2em; font-weight: 700; }
+
+  .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 30px; }
+
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  }
+  .card h3 { color: #24346b; margin-bottom: 10px; font-size: 1.3em; }
+  .card p { font-size: 1em; line-height: 1.5; color: #555; }
+  .card .duration { font-weight: 500; margin-top: 15px; color: #0077cc; }
+
+  .btn {
+    display: inline-block;
+    background: #fddd00;
+    color: #24346b;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .btn:hover { background: #e6c800; transform: translateY(-2px); }
+
+  .form-container {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+  }
+  .form-container label { display: block; margin-top: 10px; font-weight: 500; color: #24346b; }
+  .form-container input, .form-container textarea {
+    width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em;
+  }
+  .form-container input:focus, .form-container textarea:focus {
+    border-color: #0077cc; outline: none; box-shadow: 0 0 8px rgba(0,119,204,0.2);
+  }
+  .submit-btn { background: #28a745; color: #fff; border: none; padding: 10px 20px; margin-top: 15px; border-radius: 8px; cursor: pointer; }
+  .submit-btn:hover { background: #1e7e34; }
+
+  @media(max-width:600px){ .container{ padding:15px; } }
+</style>
+</head>
+<body>
+
+<header>Clases Centro de Desarrollo 20-30</header>
+
+<div class="container" id="class-container">
+  <!-- Las tarjetas se generarán aquí -->
+</div>
+
+<script>
+const classData = [
+  { id:'liderazgo', title:'Liderazgo Comunitario 2030', description:'Desarrolla habilidades para liderar proyectos sociales y motivar equipos.', duration:'6 semanas' },
+  { id:'voluntariado', title:'Gestión de Voluntariado', description:'Aprende a organizar, coordinar y liderar equipos voluntarios.', duration:'3 semanas' },
+  { id:'comunicacion', title:'Comunicación con Propósito', description:'Técnicas de oratoria, expresión emocional y escucha activa para líderes.', duration:'4 semanas' },
+  { id:'empleo', title:'Formación para el Empleo', description:'Prepara tu perfil laboral: CV, entrevistas, habilidades blandas.', duration:'6 semanas' },
+  { id:'emprendimiento', title:'Emprendimiento Solidario', description:'Crea proyectos con impacto social desde cero.', duration:'5 semanas' },
+  { id:'finanzas', title:'Finanzas para la Vida', description:'Aprende a administrar tu dinero, ahorrar y planificar.', duration:'4 semanas' },
+  { id:'salud', title:'Salud Mental y Bienestar', description:'Estrategias de autocuidado, manejo del estrés y redes de apoyo.', duration:'3 semanas' },
+  { id:'arte', title:'Arte y Cultura para el Cambio', description:'Usa el arte como herramienta de transformación social.', duration:'5 semanas' },
+  { id:'tecnologia', title:'Tecnología para el Bien Social', description:'Herramientas digitales para proyectos comunitarios y diseño web básico.', duration:'6 semanas' },
+  { id:'ambiental', title:'Educación Ambiental Activa', description:'Ecología, reciclaje y sostenibilidad en acción.', duration:'4 semanas' },
+];
+
+const container = document.getElementById('class-container');
+
+classData.forEach(cls=>{
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.innerHTML = `
+    <h3>${cls.title}</h3>
+    <p>${cls.description}</p>
+    <div class="duration"><strong>Duración:</strong> ${cls.duration}</div>
+    <button class="btn" onclick="toggleForm('${cls.id}')">Registrarse</button>
+    <form class="form-container" id="form-${cls.id}" onsubmit="submitForm(event)">
+      <label>Nombre</label>
+      <input type="text" name="nombre" required />
+      <label>Apellidos</label>
+      <input type="text" name="apellidos" required />
+      <label>Correo</label>
+      <input type="email" name="correo" required />
+      <label>Edad</label>
+      <input type="number" name="edad" required />
+      <label>Motivo para inscribirse</label>
+      <textarea name="motivo" rows="3" required></textarea>
+      <button type="submit" class="submit-btn">Enviar</button>
+    </form>
+  `;
+  container.appendChild(card);
+});
+
+function toggleForm(id){
+  const form = document.getElementById(`form-${id}`);
+  form.style.display = form.style.display==='block'?'none':'block';
+}
+
+function submitForm(event){
+  event.preventDefault();
+  const form = event.target;
+  const nombre = form.nombre.value;
+  const apellidos = form.apellidos.value;
+  alert(`¡Gracias, ${nombre} ${apellidos}! Tu inscripción fue enviada ✅`);
+  form.reset();
+  form.style.display = 'none';
+}
+</script>
+
+</body>
+</html>

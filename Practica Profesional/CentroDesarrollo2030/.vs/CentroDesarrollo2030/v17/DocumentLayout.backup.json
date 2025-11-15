@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Soluciones\\OneDrive\\Desktop\\Practica Profesional\\CentroDesarrollo2030\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF84F9F-5ECE-4706-B230-10ACB5F327BB}|..\\ApiCdd2030\\ApiCdd2030.csproj|c:\\users\\soluciones\\onedrive\\desktop\\practica profesional\\apicdd2030\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF84F9F-5ECE-4706-B230-10ACB5F327BB}|..\\ApiCdd2030\\ApiCdd2030.csproj|c:\\users\\soluciones\\onedrive\\desktop\\practica profesional\\apicdd2030\\controllers\\tipousuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7D6FBF8-AF94-4776-A63C-B100CE70CD9D}|..\\Capadedatos\\Capadedatos.csproj|c:\\users\\soluciones\\onedrive\\desktop\\practica profesional\\capadedatos\\models\\tipousuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF84F9F-5ECE-4706-B230-10ACB5F327BB}|..\\ApiCdd2030\\ApiCdd2030.csproj|c:\\users\\soluciones\\onedrive\\desktop\\practica profesional\\apicdd2030\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7D6FBF8-AF94-4776-A63C-B100CE70CD9D}|..\\Capadedatos\\Capadedatos.csproj|c:\\users\\soluciones\\onedrive\\desktop\\practica profesional\\capadedatos\\dscentrodesarrollo.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7D6FBF8-AF94-4776-A63C-B100CE70CD9D}|..\\Capadedatos\\Capadedatos.csproj|c:\\users\\soluciones\\onedrive\\desktop\\practica profesional\\capadedatos\\models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF84F9F-5ECE-4706-B230-10ACB5F327BB}|..\\ApiCdd2030\\ApiCdd2030.csproj|c:\\users\\soluciones\\onedrive\\desktop\\practica profesional\\apicdd2030\\controllers\\tiposerviciocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7D6FBF8-AF94-4776-A63C-B100CE70CD9D}|..\\Capadedatos\\Capadedatos.csproj|c:\\users\\soluciones\\onedrive\\desktop\\practica profesional\\capadedatos\\models\\tiposerviciomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED9846C9-2658-41A8-9D7C-FB015C133B0F}|..\\pruebas\\pruebas.csproj|c:\\users\\soluciones\\onedrive\\desktop\\practica profesional\\pruebas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 16,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UsuarioModel.cs",
+              "DocumentMoniker": "C:\\Users\\Soluciones\\OneDrive\\Desktop\\Practica Profesional\\Capadedatos\\Models\\UsuarioModel.cs",
+              "RelativeDocumentMoniker": "..\\Capadedatos\\Models\\UsuarioModel.cs",
+              "ToolTip": "C:\\Users\\Soluciones\\OneDrive\\Desktop\\Practica Profesional\\Capadedatos\\Models\\UsuarioModel.cs",
+              "RelativeToolTip": "..\\Capadedatos\\Models\\UsuarioModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T21:58:35.568Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\Soluciones\\OneDrive\\Desktop\\Practica Profesional\\ApiCdd2030\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "..\\ApiCdd2030\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\Soluciones\\OneDrive\\Desktop\\Practica Profesional\\ApiCdd2030\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "..\\ApiCdd2030\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAuwDcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T21:54:36.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Soluciones\\OneDrive\\Desktop\\Practica Profesional\\ApiCdd2030\\Program.cs",
+              "RelativeDocumentMoniker": "..\\ApiCdd2030\\Program.cs",
+              "ToolTip": "C:\\Users\\Soluciones\\OneDrive\\Desktop\\Practica Profesional\\ApiCdd2030\\Program.cs",
+              "RelativeToolTip": "..\\ApiCdd2030\\Program.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAuwBsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T20:54:42.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TipoUsuariomodel.cs",
+              "DocumentMoniker": "C:\\Users\\Soluciones\\OneDrive\\Desktop\\Practica Profesional\\Capadedatos\\Models\\TipoUsuariomodel.cs",
+              "RelativeDocumentMoniker": "..\\Capadedatos\\Models\\TipoUsuariomodel.cs",
+              "ToolTip": "C:\\Users\\Soluciones\\OneDrive\\Desktop\\Practica Profesional\\Capadedatos\\Models\\TipoUsuariomodel.cs",
+              "RelativeToolTip": "..\\Capadedatos\\Models\\TipoUsuariomodel.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAcwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T17:54:34.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TipoUsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\Soluciones\\OneDrive\\Desktop\\Practica Profesional\\ApiCdd2030\\Controllers\\TipoUsuarioController.cs",
+              "RelativeDocumentMoniker": "..\\ApiCdd2030\\Controllers\\TipoUsuarioController.cs",
+              "ToolTip": "C:\\Users\\Soluciones\\OneDrive\\Desktop\\Practica Profesional\\ApiCdd2030\\Controllers\\TipoUsuarioController.cs",
+              "RelativeToolTip": "..\\ApiCdd2030\\Controllers\\TipoUsuarioController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T14:58:42.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "dsCentroDesarrollo.xsd",
+              "DocumentMoniker": "C:\\Users\\Soluciones\\OneDrive\\Desktop\\Practica Profesional\\Capadedatos\\dsCentroDesarrollo.xsd",
+              "RelativeDocumentMoniker": "..\\Capadedatos\\dsCentroDesarrollo.xsd",
+              "ToolTip": "C:\\Users\\Soluciones\\OneDrive\\Desktop\\Practica Profesional\\Capadedatos\\dsCentroDesarrollo.xsd",
+              "RelativeToolTip": "..\\Capadedatos\\dsCentroDesarrollo.xsd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2025-11-07T02:36:02.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TipoServicioController.cs",
+              "DocumentMoniker": "C:\\Users\\Soluciones\\OneDrive\\Desktop\\Practica Profesional\\ApiCdd2030\\Controllers\\TipoServicioController.cs",
+              "RelativeDocumentMoniker": "..\\ApiCdd2030\\Controllers\\TipoServicioController.cs",
+              "ToolTip": "C:\\Users\\Soluciones\\OneDrive\\Desktop\\Practica Profesional\\ApiCdd2030\\Controllers\\TipoServicioController.cs",
+              "RelativeToolTip": "..\\ApiCdd2030\\Controllers\\TipoServicioController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T21:20:36.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TipoServicioModel.cs",
+              "DocumentMoniker": "C:\\Users\\Soluciones\\OneDrive\\Desktop\\Practica Profesional\\Capadedatos\\Models\\TipoServicioModel.cs",
+              "RelativeDocumentMoniker": "..\\Capadedatos\\Models\\TipoServicioModel.cs",
+              "ToolTip": "C:\\Users\\Soluciones\\OneDrive\\Desktop\\Practica Profesional\\Capadedatos\\Models\\TipoServicioModel.cs",
+              "RelativeToolTip": "..\\Capadedatos\\Models\\TipoServicioModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T21:22:14.874Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Soluciones\\OneDrive\\Desktop\\Practica Profesional\\pruebas\\Program.cs",
+              "RelativeDocumentMoniker": "..\\pruebas\\Program.cs",
+              "ToolTip": "C:\\Users\\Soluciones\\OneDrive\\Desktop\\Practica Profesional\\pruebas\\Program.cs",
+              "RelativeToolTip": "..\\pruebas\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-24T03:27:54.203Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

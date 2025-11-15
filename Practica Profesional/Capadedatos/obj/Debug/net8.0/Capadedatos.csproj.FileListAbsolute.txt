@@ -1,0 +1,12 @@
+C:\Users\Soluciones\OneDrive\Desktop\Practica Profesional\Capadedatos\bin\Debug\net8.0\Capadedatos.deps.json
+C:\Users\Soluciones\OneDrive\Desktop\Practica Profesional\Capadedatos\bin\Debug\net8.0\Capadedatos.dll
+C:\Users\Soluciones\OneDrive\Desktop\Practica Profesional\Capadedatos\bin\Debug\net8.0\Capadedatos.pdb
+C:\Users\Soluciones\OneDrive\Desktop\Practica Profesional\Capadedatos\obj\Debug\net8.0\Capadedatos.csproj.AssemblyReference.cache
+C:\Users\Soluciones\OneDrive\Desktop\Practica Profesional\Capadedatos\obj\Debug\net8.0\Capadedatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Soluciones\OneDrive\Desktop\Practica Profesional\Capadedatos\obj\Debug\net8.0\Capadedatos.AssemblyInfoInputs.cache
+C:\Users\Soluciones\OneDrive\Desktop\Practica Profesional\Capadedatos\obj\Debug\net8.0\Capadedatos.AssemblyInfo.cs
+C:\Users\Soluciones\OneDrive\Desktop\Practica Profesional\Capadedatos\obj\Debug\net8.0\Capadedatos.csproj.CoreCompileInputs.cache
+C:\Users\Soluciones\OneDrive\Desktop\Practica Profesional\Capadedatos\obj\Debug\net8.0\Capadedatos.dll
+C:\Users\Soluciones\OneDrive\Desktop\Practica Profesional\Capadedatos\obj\Debug\net8.0\refint\Capadedatos.dll
+C:\Users\Soluciones\OneDrive\Desktop\Practica Profesional\Capadedatos\obj\Debug\net8.0\Capadedatos.pdb
+C:\Users\Soluciones\OneDrive\Desktop\Practica Profesional\Capadedatos\obj\Debug\net8.0\ref\Capadedatos.dll
