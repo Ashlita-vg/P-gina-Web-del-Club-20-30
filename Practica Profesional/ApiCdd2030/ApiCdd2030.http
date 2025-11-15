@@ -1,0 +1,6 @@
+@ApiCdd2030_HostAddress = http://localhost:5189
+
+GET {{ApiCdd2030_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

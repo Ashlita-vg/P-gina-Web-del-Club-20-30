@@ -1,0 +1,8 @@
+C:\Users\Soluciones\OneDrive\Desktop\Practica Profesional\CentroDesarrollo2030\obj\Debug\net8.0\CentroDesarrollo2030.csproj.AssemblyReference.cache
+C:\Users\Soluciones\OneDrive\Desktop\Practica Profesional\CentroDesarrollo2030\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Soluciones\OneDrive\Desktop\Practica Profesional\CentroDesarrollo2030\obj\Debug\net8.0\CentroDesarrollo2030.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Soluciones\OneDrive\Desktop\Practica Profesional\CentroDesarrollo2030\obj\Debug\net8.0\CentroDesarrollo2030.AssemblyInfoInputs.cache
+C:\Users\Soluciones\OneDrive\Desktop\Practica Profesional\CentroDesarrollo2030\obj\Debug\net8.0\CentroDesarrollo2030.AssemblyInfo.cs
+C:\Users\Soluciones\OneDrive\Desktop\Practica Profesional\CentroDesarrollo2030\obj\Debug\net8.0\CentroDesarrollo2030.csproj.CoreCompileInputs.cache
+C:\Users\Soluciones\OneDrive\Desktop\Practica Profesional\CentroDesarrollo2030\obj\Debug\net8.0\CentroDesarrollo2030.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Soluciones\OneDrive\Desktop\Practica Profesional\CentroDesarrollo2030\obj\Debug\net8.0\CentroDesarrollo2030.MvcApplicationPartsAssemblyInfo.cache
