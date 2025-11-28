@@ -13,3 +13,5 @@ C:\Users\Hector Padilla\source\repos\Activo2030_API\Controller_Activo2030\obj\De
 C:\Users\Hector Padilla\source\repos\Activo2030_API\Controller_Activo2030\obj\Debug\net8.0\refint\Controller_Activo2030.dll
 C:\Users\Hector Padilla\source\repos\Activo2030_API\Controller_Activo2030\obj\Debug\net8.0\Controller_Activo2030.pdb
 C:\Users\Hector Padilla\source\repos\Activo2030_API\Controller_Activo2030\obj\Debug\net8.0\ref\Controller_Activo2030.dll
+C:\Users\Hector Padilla\source\repos\Activo2030_API\Controller_Activo2030\bin\Debug\net8.0\Interface_Activo2030.dll
+C:\Users\Hector Padilla\source\repos\Activo2030_API\Controller_Activo2030\bin\Debug\net8.0\Interface_Activo2030.pdb

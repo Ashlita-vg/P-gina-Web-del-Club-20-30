@@ -1,9 +1,12 @@
 ﻿using Dapper;
+using Interface_Activo2030;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Options;
 using Model_Activo2030;
+using Newtonsoft.Json;
 using System.Data;
+using System.Text.Json;
 
 namespace Controller_Activo2030
 {
@@ -12,19 +15,21 @@ namespace Controller_Activo2030
     public class UserController: ControllerBase
     {
         private readonly AppSettings appSettings;
+        private readonly IBL_User _user;
 
-        public UserController(AppSettings appSettings)
+        public UserController(AppSettings appSettings, IBL_User _user)
         {
             this.appSettings = appSettings;
+            this._user = _user;
         }
 
         [HttpGet]
         [Route("SelectUser")]
-        public async Task<IActionResult> SelectUser(string username)
+        public async Task<IActionResult> SelectUser(string? username)
         {
             try
             {
-                BaseResponse req = await getSomething();
+                BaseResponse req = await _user.GetUser();
 
                 if(req.StatusCode != 200)
                 {
@@ -45,49 +50,72 @@ namespace Controller_Activo2030
             }  
         }
 
-
-        private async Task<BaseResponse> getSomething()
+        [HttpPost]
+        [Route("CreateUser")]
+        public async Task<IActionResult> CreateUser(User? user)
         {
             try
             {
-                using var conn = new SqlConnection(this.appSettings.ConnectionString);
+                BaseResponse req = await _user.CreateUser(user);
+                
 
-                var json = await conn.QueryFirstOrDefaultAsync<string>(
-                    "activo2030.sp_GetUser",
-                    commandType: CommandType.StoredProcedure
-                );                
-
-                if (json is null)
+                if (req.StatusCode != 200)
                 {
-                    return new BaseResponse
-                    {
-                        Error = "No se encontraron datos",
-                        StatusCode = 400
-                    };
-                }                
+                    return BadRequest(req);
+                }
 
-                return new BaseResponse
-                {
-                    StatusCode = 200,
-                    Result = json,
-                    Error = "0"
-                };
+                
+                return Ok(req);
+
             }
-            catch
+            catch (Exception ex)
             {
-                return new BaseResponse
-                {
-                    Error = "Ocurrio un error al obtener los datos",
-                    StatusCode = 400
-                };
+                return BadRequest(ex.Message);
             }
+        }
 
-            return new BaseResponse
+        [HttpPost]
+        [Route("UpdateUser")]
+        public async Task<IActionResult> UpdateUser(User? user)
+        {
+            try
             {
-                Error = "Ocurrio un error en el método getSomething",
-                StatusCode = 400
-            };
+                BaseResponse req = await _user.UpdateUser(user);
 
+                if (req.StatusCode != 200)
+                {
+                    return BadRequest(req);
+                }
+
+                return Ok(req);
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete]
+        [Route("DeleteUser")]
+        public async Task<IActionResult> DeleteUser(User? user)
+        {
+            try
+            {
+                BaseResponse req = await _user.DeleteUser(user);
+
+                if (req.StatusCode != 200)
+                {
+                    return BadRequest(req);
+                }
+
+                return Ok(req);
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

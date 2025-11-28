@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Interface_Activo2030/1.0.0": {
+        "dependencies": {
+          "Model_Activo2030": "1.0.0"
+        },
+        "runtime": {
+          "Interface_Activo2030.dll": {}
+        }
+      },
+      "Model_Activo2030/1.0.0": {
+        "runtime": {
+          "Model_Activo2030.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Interface_Activo2030/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Model_Activo2030/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,3 +1,7 @@
+using Business_Logic_Activo2030;
+using Businnes_Logic_Activo2030;
+using Data_Access_Activo2030;
+using Interface_Activo2030;
 using Model_Activo2030;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,13 +11,20 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
+
 builder.Services.AddSwaggerGen();
 
 
 var appSettings = await FillAppSettings(builder.Configuration);
-
-
 builder.Services.AddSingleton(appSettings);
+
+builder.Services.AddScoped<IBL_User, BL_User>();
+builder.Services.AddScoped<IDA_User, DA_User>();
+
+builder.Services.AddScoped<IBL_Request, BL_Request>();
+builder.Services.AddScoped<IDA_Request, DA_Request>();
+
 
 
 

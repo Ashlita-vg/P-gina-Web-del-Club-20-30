@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Model_Activo2030\Model_Activo2030.csproj" />
+  </ItemGroup>
+
 </Project>

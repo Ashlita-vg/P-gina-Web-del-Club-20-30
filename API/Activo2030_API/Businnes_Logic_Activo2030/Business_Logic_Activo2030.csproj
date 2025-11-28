@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Interface_Activo2030\Interface_Activo2030.csproj" />
+  </ItemGroup>
+
 </Project>
