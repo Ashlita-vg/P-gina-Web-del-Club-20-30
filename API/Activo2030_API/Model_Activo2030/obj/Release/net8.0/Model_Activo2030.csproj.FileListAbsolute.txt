@@ -1,0 +1,11 @@
+C:\Users\Hector Padilla\source\repos\Activo2030_API\Model_Activo2030\bin\Release\net8.0\Model_Activo2030.deps.json
+C:\Users\Hector Padilla\source\repos\Activo2030_API\Model_Activo2030\bin\Release\net8.0\Model_Activo2030.dll
+C:\Users\Hector Padilla\source\repos\Activo2030_API\Model_Activo2030\bin\Release\net8.0\Model_Activo2030.pdb
+C:\Users\Hector Padilla\source\repos\Activo2030_API\Model_Activo2030\obj\Release\net8.0\Model_Activo2030.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hector Padilla\source\repos\Activo2030_API\Model_Activo2030\obj\Release\net8.0\Model_Activo2030.AssemblyInfoInputs.cache
+C:\Users\Hector Padilla\source\repos\Activo2030_API\Model_Activo2030\obj\Release\net8.0\Model_Activo2030.AssemblyInfo.cs
+C:\Users\Hector Padilla\source\repos\Activo2030_API\Model_Activo2030\obj\Release\net8.0\Model_Activo2030.csproj.CoreCompileInputs.cache
+C:\Users\Hector Padilla\source\repos\Activo2030_API\Model_Activo2030\obj\Release\net8.0\Model_Activo2030.dll
+C:\Users\Hector Padilla\source\repos\Activo2030_API\Model_Activo2030\obj\Release\net8.0\refint\Model_Activo2030.dll
+C:\Users\Hector Padilla\source\repos\Activo2030_API\Model_Activo2030\obj\Release\net8.0\Model_Activo2030.pdb
+C:\Users\Hector Padilla\source\repos\Activo2030_API\Model_Activo2030\obj\Release\net8.0\ref\Model_Activo2030.dll

@@ -11,7 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Businnes_Logic_Activo2030\Business_Logic_Activo2030.csproj" />
     <ProjectReference Include="..\Controller_Activo2030\Controller_Activo2030.csproj" />
+    <ProjectReference Include="..\Data_Access_Activo2030\Data_Access_Activo2030.csproj" />
+    <ProjectReference Include="..\Interface_Activo2030\Interface_Activo2030.csproj" />
     <ProjectReference Include="..\Model_Activo2030\Model_Activo2030.csproj" />
   </ItemGroup>
 

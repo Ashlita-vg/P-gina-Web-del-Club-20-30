@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "Model_Activo2030/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Model_Activo2030.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Model_Activo2030.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Model_Activo2030/1.0.0": {
+      "type": "project",
+      "path": "../Model_Activo2030/Model_Activo2030.csproj",
+      "msbuildProject": "../Model_Activo2030/Model_Activo2030.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "Model_Activo2030 >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Hector Padilla\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Hector Padilla\\source\\repos\\Activo2030_API\\Model_Activo2030\\Model_Activo2030.csproj": {
+              "projectPath": "C:\\Users\\Hector Padilla\\source\\repos\\Activo2030_API\\Model_Activo2030\\Model_Activo2030.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

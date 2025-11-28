@@ -90,3 +90,9 @@ C:\Users\Hector Padilla\source\repos\Activo2030_API\Activo2030_API\bin\Debug\net
 C:\Users\Hector Padilla\source\repos\Activo2030_API\Activo2030_API\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\Hector Padilla\source\repos\Activo2030_API\Activo2030_API\bin\Debug\net8.0\Controller_Activo2030.dll
 C:\Users\Hector Padilla\source\repos\Activo2030_API\Activo2030_API\bin\Debug\net8.0\Controller_Activo2030.pdb
+C:\Users\Hector Padilla\source\repos\Activo2030_API\Activo2030_API\bin\Debug\net8.0\Business_Logic_Activo2030.dll
+C:\Users\Hector Padilla\source\repos\Activo2030_API\Activo2030_API\bin\Debug\net8.0\Data_Access_Activo2030.dll
+C:\Users\Hector Padilla\source\repos\Activo2030_API\Activo2030_API\bin\Debug\net8.0\Interface_Activo2030.dll
+C:\Users\Hector Padilla\source\repos\Activo2030_API\Activo2030_API\bin\Debug\net8.0\Business_Logic_Activo2030.pdb
+C:\Users\Hector Padilla\source\repos\Activo2030_API\Activo2030_API\bin\Debug\net8.0\Data_Access_Activo2030.pdb
+C:\Users\Hector Padilla\source\repos\Activo2030_API\Activo2030_API\bin\Debug\net8.0\Interface_Activo2030.pdb
